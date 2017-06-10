@@ -1,3 +1,16 @@
-Python dependancies:
-requests
-bs4
+1. Python dependencies:{requests,bs4}
+
+2. To run the program:
+
+python download.py 20/05/2017 21/05/2017
+
+**********command: python download.py starting_date end_date ***************
+
+or 
+
+python download.py
+
+********* for default parameters i.e. date: 20/05/2017 to 20/05/2017 ***********
+
+
+

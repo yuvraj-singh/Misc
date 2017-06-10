@@ -20,15 +20,21 @@ FORM_DATA_FILENAME = "form_data.json"
 sdate = "20/05/2017" # default starting date
 edate = "20/05/2017" # default  ending date
 if len(sys.argv) == 2:
-	print "incorrect number of arguments...... Downloading prices for 20/05/2017"
+	sdate = sys.argv[1]
+	edate = sdate
 
 if len(sys.argv) >= 3:
 	sdate = sys.argv[1]
 	edate = sys.argv[2]
 
-format = "EXCEL"
+arfilename = "IEX"
 if len(sys.argv) >= 4:
-	format = sys.argv[3]
+	arfilename = sys.argv[3]
+
+
+format = "EXCELOPENXML"
+if len(sys.argv) >= 5:
+	format = sys.argv[4]
 ###
 
 # Load default form data
@@ -102,7 +108,7 @@ def find_export_url(html_page, format="EXCEL"):
 	p = query_params # for ease in typing
 
 	export_base_url = "/Reserved.ReportViewerWebControl.axd?Culture={Culture}&CultureOverrides={CultureOverrides}&UICulture={UICulture}&UICultureOverrides={UICultureOverrides}&ReportStack={ReportStack}&ControlID={ControlID}&Mode={Mode}&OpType=Export&FileName={FileName}&ContentDisposition=OnlyHtmlInline&Format={Format}"
-	export_filename = "Iex" # can use any filename; does not matter; so using default value
+	export_filename = arfilename # can use any filename; does not matter; so using default value
 
 	ControlID = find_control_id(html_page)
 
