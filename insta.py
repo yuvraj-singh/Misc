@@ -61,7 +61,7 @@ def get_vid_urls(id):
         link = ss.find("meta", {"property" : "og:video:secure_url"})['content']
         vurls.append(link)
         vid_count = vid_count + 1
-    print "Downloading " + str(vid_count) + " images ................"
+    print "Downloading " + str(vid_count) + " videos ................"
     return vurls
 
 def download(urls):
