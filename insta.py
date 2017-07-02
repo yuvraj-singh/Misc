@@ -2,7 +2,6 @@
 import sys
 import mechanize
 from bs4 import BeautifulSoup
-from subprocess import call
 import requests
 import json
 import os
