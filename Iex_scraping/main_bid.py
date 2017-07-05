@@ -124,9 +124,9 @@ def single_file(i):
 				k+=96
 	print "saving newbidFile"+str(i)+".xlsx......."
 	wwb.save('newbidFile'+str(i)+'.xlsx')
-file_count = 64
+# file_count = 64
 # downloading files for data of electricity prices within the date range
-# file_count = download_files()
+file_count = download_files()
 # creating new files for each 15 minute block from the downloaded dataMercad
-for i in range(1,97):
-	single_file(i)
+# for i in range(1,97):
+# 	single_file(i)

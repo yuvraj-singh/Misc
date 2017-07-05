@@ -16,7 +16,7 @@ def weekday(d):
     wsheet['D1'] = 'Sell Bid'
     rc=1
     weekend = 1
-    for i in range(3,1897):
+    for i in range(3,1924):
         if(weekend >= 6):
             if(weekend == 7):
                 weekend = 1
